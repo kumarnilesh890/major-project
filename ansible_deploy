@@ -1,0 +1,12 @@
+---
+
+
+- hosts: all
+  become: yes
+  tasks:
+  - copy:
+      src: /var/lib/jenkins/workspace/janya/Websitedeploy/
+      dest: /var/www/html
+      owner: root
+      group: root
+      mode: 0755
